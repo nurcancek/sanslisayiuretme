@@ -1,2 +1,28 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    Scanner tara=new Scanner(System.in);
+    int sansliSayi=(int) (Math.random()*99+1);
+    System.out.println("lütfen sayı giriniz: \n");
+    int tahminEdilenSayi=tara.nextInt();
+    //87 üretilen sayı kullanıcı tahmini 78
+    int sansliSayiBirinciBasamak=sansliSayi/10;
+    int sansliSayiİkinciBasamak=sansliSayi %10;
+
+    int tahminEdilenSayiBirinciBasamak=tahminEdilensayi/10;
+    int tahminEdilenSayiİkinciBasamak=tahminEdilensayi%10;
+    if(sansliSayi==tahminEdilenSayi){
+      System.out.println("tebrikler 1000 tl kazandınız sansli sayi: " + sansliSayi + "sizin tahminiz:"+ tahminEdilenSayi);
+  }
+    else if(sansliSayiBirinciBasamak == tahminEdilenSayiİkinciBasamak && sansliSayiİkinciBasamak==tahminEdilenSayiBirinciBasamak){
+      System.out.println("tebrikler 500 tl kazandınız sansli sayi: " + sansliSayi+ "sizin tahmininiz:" + tahminEdilenSayi);
+    }
+            else if( sansliSayiBirinciBasamak == tahminEdilenSayiBirinciBasamak || sansliSayiBirinciBasamak==tahminEdilenSayiİkinciBasamak){
+              System.out.println("tebrikler 200 tl kazandınız " + sansliSayi+ "sizin tahminiz:" + tahminEdilenSayi);
+            } else{
+              System.out.println("maalesef kaybettiniz sanslisayi: " + sansliSayi+ "sizin tahminiz:" + tahminEdilenSayi);
+            }
+
+    }
+      
+           }
